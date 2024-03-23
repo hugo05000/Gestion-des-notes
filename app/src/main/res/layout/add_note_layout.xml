@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/noteNameId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom de la note"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/noteDescriptionId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Détail"
+        app:layout_constraintTop_toBottomOf="@+id/noteNameId"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/butonAjouterId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        app:layout_constraintTop_toBottomOf="@+id/noteDescriptionId"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/butonAnnulerId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Annuler"
+        app:layout_constraintTop_toBottomOf="@+id/noteDescriptionId"
+        app:layout_constraintStart_toEndOf="@+id/butonAjouterId"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
